@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamberger-menu {
+  position: relative;
+  width: 1.3rem;
+  height: 1rem;
+}
+
+.menu-links {
+  position: absolute;
+  top: -100%;
+  left: 10%;
+  width: 80vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
+  transition: top 0.2s;
+  z-index: 20;
+}
+.show-menu {
+  top: 88px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(2, 0, 36, 0.5);
+  background: linear-gradient(
+    4deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  opacity: 0.5;
+}
+
+.hamberger {
+  position: absolute;
+  right: 1rem;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.hamberger-top {
+  top: 0%;
+}
+.hamberger-middle {
+  top: 50%;
+}
+.hamberger-last {
+  bottom: 0;
+}
+
+.active-menu > .hamberger-top {
+  transform: rotate(45deg);
+}
+.active-menu > .hamberger-last {
+  top: 0%;
+  transform: rotate(-45deg);
+}
+.active-menu > .hamberger-middle {
+  display: none;
+}
