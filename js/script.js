@@ -7,3 +7,11 @@ menu.addEventListener("click", () => {
   menuLink.classList.toggle("show-menu");
   overlay.classList.toggle("overlay");
 });
+
+windows.addEventListener("scroll", () => {
+  if (window.scrollY > 1) {
+    menu.classList.toggle("active-menu");
+    menuLink.classList.toggle("show-menu");
+    overlay.classList.toggle("overlay");
+  }
+});
